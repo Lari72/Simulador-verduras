@@ -44,7 +44,7 @@ while (continuarComprando) {
 // Mostrar el total de la compra al finalizar la simulación
 alert(`El total de su compra es de $${totalCompra}. ¡Gracias por su compra!`);
 
-// Definimos una función para elegir el medio de pago del usuario
+//  Función para elegir el medio de pago del usuario
 function realizarPago() {
 
     if (medioPago === "tarjeta") {
