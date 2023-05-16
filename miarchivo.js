@@ -17,7 +17,7 @@ function agregarProducto(producto, precio) {
 // Un ciclo condicional para agregar productos al carrito
 let continuarComprando = true;
 while (continuarComprando) {
-  let producto = prompt("Ingrese el nombre del producto que desea comprar (tomate, cebolla, zanahoria, papa, lechuga):");
+  let producto = prompt("Ingrese el nombre del producto que desea comprar (tomate, cebolla, zanahoria, papa, lechuga, espinaca):");
   switch (producto) {
     case "tomate":
       agregarProducto("tomate", 2.5);
@@ -33,6 +33,9 @@ while (continuarComprando) {
       break;
       case "lechuga":
       agregarProducto("lechuga", 5);
+      break;
+      case "espinaca":
+      agregarProducto("espinaca", 5);
       break;
     default:
       alert("El producto ingresado es inválido. Por favor, ingrese uno de los productos disponibles.");
@@ -81,9 +84,44 @@ comprarVerduras("lechuga", 0, 7);
 comprarVerduras("cebolla", 9, 5);
 comprarVerduras("pimiento", 0, 8);
 comprarVerduras("papa", 4, 5);
+comprarVerduras("espinaca", 4, 5);
 
-  
-  
-  
-  
-  
+
+ // Variables Vegetables que es un array y que contiene obejtos 
+let vegetables = [
+  { name: "Zanahoria", price: 1.5, stock: 10 },
+  { name: "Tomate", price: 2, stock: 15 },
+  { name: "Lechuga", price: 1, stock: 5 },
+  { name: "Papa", price: 1.2, stock: 8 },
+  { name: "Cebolla", price: 0.8, stock: 12 },
+ 
+
+
+];
+
+// Funcion buscar verduras y tambien de entrada y salida
+function searchVegetable(event) {
+  event.preventDefault();
+  const searchInput = document.getElementById("search-input");
+  const query = searchInput.value.toLowerCase();
+  const result = document.getElementById("result");
+  result.innerHTML = "";
+
+  const filteredVegetables = vegetables.filter(vegetable =>
+    vegetable.name.toLowerCase().includes(query)
+  );
+
+  if (filteredVegetables.length === 0) {
+    result.textContent = "No se encontraron resultados. Intenta de nuevo";
+  } else {
+    filteredVegetables.forEach(vegetable => {
+      const vegetableInfo = document.createElement("p");
+      vegetableInfo.textContent = `${vegetable.name} - Precio: $${vegetable.price} - Stock: ${vegetable.stock}`;
+      result.appendChild(vegetableInfo);
+    });
+  }
+  searchInput.value = "";
+}
+// Event listener para buscar verduras
+const searchForm = document.getElementById("search-form");
+searchForm.addEventListener("submit", searchVegetable);
