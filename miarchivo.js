@@ -125,3 +125,39 @@ function searchVegetable(event) {
 // Event listener para buscar verduras
 const searchForm = document.getElementById("search-form");
 searchForm.addEventListener("submit", searchVegetable);
+
+
+// Variables
+let total = 0;
+
+// Objeto verdura
+function Verdura(pimenton, precio, color) {
+  this.nombre = nombre;
+  this.precio = precio;
+  this.color = color;
+}
+
+// Array para almacenar las verduras seleccionadas
+let carrito = [];
+
+function agregarAlCarrito(nombre, precio,color) {
+  const verdura = new Verdura(nombre, precio,color);
+  carrito.push(verdura);
+  total += precio;
+}
+
+function mostrarCarrito() {
+  console.log("Carrito de compras:");
+  for (let i = 0; i < carrito.length; i++) {
+    console.log(carrito[i].nombre + " - $" + carrito[i].precio);
+  }
+  console.log("Total: $" + total);
+}
+
+// Ejemplo de entrada y salida en la consola del navegador
+const nombre = prompt("Ingrese el nombre de la verdura:");
+const color = prompt("Ingrese el color");
+const precio = parseFloat(prompt("Ingrese el precio de la verdura:"));
+
+agregarAlCarrito(nombre, precio,color);
+mostrarCarrito();
