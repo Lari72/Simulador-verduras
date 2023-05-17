@@ -1,4 +1,4 @@
-// Definición de la clase Verdura
+// Clase Verdura
 class Verdura {
   constructor(nombre, precio, stock) {
     this.nombre = nombre;
@@ -7,7 +7,7 @@ class Verdura {
   }
 }
 
-// Creación de las verduras disponibles en la tienda
+// Creación de Catalogo con las verduras disponibles en la tienda
 const verdurasDisponibles = [
   new Verdura("Zanahoria", 1.5, 10),
   new Verdura("Tomate", 2.0, 15),
@@ -33,7 +33,7 @@ function buscarVerdura(nombre, verduras) {
   return verduras.find((verdura) => verdura.nombre.toLowerCase() === nombre.toLowerCase());
 }
 
-// Función para filtrar las verduras por precio máximo en el catálogo
+// Función para filtrar las verduras por precio  en el catálogo
 function filtrarPorPrecioMaximo(precioMaximo, verduras) {
   return verduras.filter((verdura) => verdura.precio <= precioMaximo);
 }
@@ -64,13 +64,14 @@ function tiendaDeVerduras() {
   } else {
     console.log("Opción inválida. Por favor, selecciona una verdura válida.");
   }
-
-  tiendaDeVerduras(); // Volver a mostrar el catálogo y solicitar la siguiente compra
+// Volver a mostrar el catálogo y solicitar la siguiente compra
+  tiendaDeVerduras(); 
 }
 
 // Ejecutar la función principal
 tiendaDeVerduras();
 
+//Agregamos el carrito de compra
 let carrito = [];
 
 function agregarAlCarrito(nombre, precio,color) {
