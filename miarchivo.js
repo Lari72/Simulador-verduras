@@ -87,77 +87,77 @@ comprarVerduras("papa", 4, 5);
 comprarVerduras("espinaca", 4, 5);
 
 
- // Variables Vegetables que es un array y que contiene obejtos 
-let vegetables = [
-  { name: "Zanahoria", price: 1.5, stock: 10 },
-  { name: "Tomate", price: 2, stock: 15 },
-  { name: "Lechuga", price: 1, stock: 5 },
-  { name: "Papa", price: 1.2, stock: 8 },
-  { name: "Cebolla", price: 0.8, stock: 12 },
- 
+// //PREENTREGA 2
+
+//  // Variables Vegetables que es un array y que contiene obejtos 
+// let vegetables = [
+//   { name: "Zanahoria", price: 1.5, stock: 10 },
+//   { name: "Tomate", price: 2, stock: 15 },
+//   { name: "Lechuga", price: 1, stock: 5 },
+//   { name: "Papa", price: 1.2, stock: 8 },
+//   { name: "Cebolla", price: 0.8, stock: 12 },
+
+// ];
+
+// // Funcion buscar verduras y tambien de entrada y salida
+// function searchVegetable(event) {
+//   event.preventDefault();
+//   const searchInput = document.getElementById("search-input");
+//   const query = searchInput.value.toLowerCase();
+//   const result = document.getElementById("result");
+//   result.innerHTML = "";
+
+//   const filteredVegetables = vegetables.filter(vegetable =>
+//     vegetable.name.toLowerCase().includes(query)
+//   );
+
+//   if (filteredVegetables.length === 0) {
+//     result.textContent = "No se encontraron resultados. Intenta de nuevo";
+//   } else {
+//     filteredVegetables.forEach(vegetable => {
+//       const vegetableInfo = document.createElement("p");
+//       vegetableInfo.textContent = `${vegetable.name} - Precio: $${vegetable.price} - Stock: ${vegetable.stock}`;
+//       result.appendChild(vegetableInfo);
+//     });
+//   }
+//   searchInput.value = "";
+// }
+// // Event listener para buscar verduras
+// const searchForm = document.getElementById("search-form");
+// searchForm.addEventListener("submit", searchVegetable);
 
 
-];
+// // Variables
+// let total = 0;
 
-// Funcion buscar verduras y tambien de entrada y salida
-function searchVegetable(event) {
-  event.preventDefault();
-  const searchInput = document.getElementById("search-input");
-  const query = searchInput.value.toLowerCase();
-  const result = document.getElementById("result");
-  result.innerHTML = "";
+// // Objeto verdura
+// function Verdura(nombre, precio, color) {
+//   this.nombre = papa;
+//   this.precio = 3;
+//   this.color = blanca;
+// }
 
-  const filteredVegetables = vegetables.filter(vegetable =>
-    vegetable.name.toLowerCase().includes(query)
-  );
+// // Array para almacenar las verduras seleccionadas
+// let carrito = [];
 
-  if (filteredVegetables.length === 0) {
-    result.textContent = "No se encontraron resultados. Intenta de nuevo";
-  } else {
-    filteredVegetables.forEach(vegetable => {
-      const vegetableInfo = document.createElement("p");
-      vegetableInfo.textContent = `${vegetable.name} - Precio: $${vegetable.price} - Stock: ${vegetable.stock}`;
-      result.appendChild(vegetableInfo);
-    });
-  }
-  searchInput.value = "";
-}
-// Event listener para buscar verduras
-const searchForm = document.getElementById("search-form");
-searchForm.addEventListener("submit", searchVegetable);
+// function agregarAlCarrito(nombre, precio,color) {
+//   const verdura = new Verdura(nombre, precio,color);
+//   carrito.push(verdura);
+//   total += precio;
+// }
 
+// function mostrarCarrito() {
+//   console.log("Carrito de compras:");
+//   for (let i = 0; i < carrito.length; i++) {
+//     console.log(carrito[i].nombre + " - $" + carrito[i].precio);
+//   }
+//   console.log("Total: $" + total);
+// }
 
-// Variables
-let total = 0;
+// // Ejemplo de entrada y salida en la consola del navegador
+// const nombre = prompt("Ingrese el nombre de la verdura:");
+// const color = prompt("Ingrese el color");
+// const precio = parseFloat(prompt("Ingrese el precio de la verdura:"));
 
-// Objeto verdura
-function Verdura(pimenton, precio, color) {
-  this.nombre = nombre;
-  this.precio = precio;
-  this.color = color;
-}
-
-// Array para almacenar las verduras seleccionadas
-let carrito = [];
-
-function agregarAlCarrito(nombre, precio,color) {
-  const verdura = new Verdura(nombre, precio,color);
-  carrito.push(verdura);
-  total += precio;
-}
-
-function mostrarCarrito() {
-  console.log("Carrito de compras:");
-  for (let i = 0; i < carrito.length; i++) {
-    console.log(carrito[i].nombre + " - $" + carrito[i].precio);
-  }
-  console.log("Total: $" + total);
-}
-
-// Ejemplo de entrada y salida en la consola del navegador
-const nombre = prompt("Ingrese el nombre de la verdura:");
-const color = prompt("Ingrese el color");
-const precio = parseFloat(prompt("Ingrese el precio de la verdura:"));
-
-agregarAlCarrito(nombre, precio,color);
-mostrarCarrito();
+// agregarAlCarrito(nombre, precio,color);
+// mostrarCarrito();
