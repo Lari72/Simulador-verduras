@@ -16,7 +16,7 @@ class Producto {
 };
 
 const productos = [
-    {id:1, nombre: "Cebolla", precio: 1500, imagen: "../Images/Cebolla.jpg", cantidad:2, descripcion: " Cebolla Verde, fresca de origen local"},
+    {id:1, nombre: "Cebolla", precio: 1500, imagen: "..//Images/Cebolla.jpg", cantidad:2, descripcion: " Cebolla Verde, fresca de origen local"},
     {id:2, nombre: "Lechuga", precio: 1000, imagen: "../Images/Lechuga.jpg", cantidad:2, descripcion: "Lechuga del dia, origen zona central"},
     {id:3, nombre: "Tomates", precio: 2500, imagen: "../Images/Tomates.jpg", cantidad:1, descripcion: "Tomates de alta calidad, origen norte"},
     {id:4, nombre: "Zanahoria", precio: 1300, imagen: "../Images/Zanahoria.jpg", cantidad:1, descripcion: "Zanahoria calidad premium, origen zona central"},
