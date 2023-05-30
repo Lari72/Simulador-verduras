@@ -1,30 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador compras de verduras en una tienda online</title>
+    <title>Verduleria online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./Images/Logo Verduleria.jpg" type="image/x-icon">
 </head>
-    <body>
+<body>
 
-      <h1>Simulador de compras verduras en tienda online</h1>
-<p>
-   El cliente ingresara el producto que desea comprar, agrega al carrito y sumar el total de la compra; mostrar el total de la compra al finalizar la simulación;
-   el cliente tiene que elegir el medio de pago, sea tarjeta o una bolsa de dinero almacenada y quiere usarlo; 
-   vamos a simular que posibilidad de compra tiene con el valor almacenado. 
-   
-   <h2>
-    <li>1.Verdura("Zanahoria")</li>
-    <li>2.Verdura("Tomate")</li>
-    <li>3.Verdura("Lechuga")</li>
-    <li>4.Verdura("Cebolla")</li>
-    <li>5.Verdura("Espinaca")</li>
-    <li>6.Verdura("Manzana")</li>
-    <li>7.Verdura("Papa")</li>
-   </h2>
+    <header class="header">
+        <nav class="navbar navbar-expand-md menu">
+            <div class="container-fluid">
+                <img class="logo" src="./Images/Logo Verduleria.jpg" alt="Verduleria online"><a href="./index.html"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="menu__item navbar navbar-expand-md navbar-nav">
+                        <li><button type="button" class="btn btn-primary btn-lg btn-menu active"><a href="./index.html">Inicio</a></button></li>
+                        <li><button type="button" class="btn btn-primary btn-lg btn-menu"><a href="./index.html"> Productos</a></button></li>
+                        <li><button type="button" class="btn btn-primary btn-lg btn-menu"><a href="./index.html">Contacto</a></button></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>  
+    </header>
 
-      
-    <script src="preentrega2.js"></script>
+    <main>
+        
+        <div>
+            <h1 class="tituloProductos">Lista de Productos</h2>
+        </div>
+        
+        <div class="productos" id="listaProductos"></div>
+        
+        <div>
+            <h2 class="tituloCarrito">Carrito de Compras</h2>
+        </div>
+
+        <div class="contenedorCarrito" id="listaCarrito"></div>
+        <p class="precioTotal">Precio Total: $ <span  id="precioTotal">0</span></p>
+        <button class="vaciarCarrito" id="vaciarCarrito">Vaciar carrito</button>
+            
+    </main>
+
+    <footer class="footer">
+        <p>Verduleria online - 2023 - Todos los derechos reservados</p>
+
+    </footer>
+
+    <script src="./preentrega3.js"></script>
 </body>
 </html>
