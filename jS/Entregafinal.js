@@ -1,3 +1,12 @@
+let Productos = [];
+
+fetch("./js/products.json")
+.then(response => response.json())
+.then(data =>{
+    productos = data;
+    cargarProductos(productos);
+
+})
 
 const listaProductos = document.getElementById("listaProductos");
 const listaCarrito = document.getElementById("listaCarrito");
@@ -99,3 +108,4 @@ const verCarrito = () => {
 
 };
 
+ 
